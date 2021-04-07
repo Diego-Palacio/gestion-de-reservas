@@ -1,7 +1,7 @@
 
 
 *{
-    font-size: 15px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
    
 }
@@ -17,11 +17,10 @@ body{background-color: #dfdfd3;
   margin: 8px 0;
   border: none;
   color: white; 
-  position:relative;
-  top:250px;
-  left:300px;
-  
-  
+   position:relative;
+   top:230px;
+    left:340px;
+ 
 }
 
 ::placeholder{
@@ -44,18 +43,21 @@ a{
 outline: none;
 text-decoration:none ;
 color:white;
-padding-left: 10px;
 display: block;
-padding-top: 16px;
-padding-bottom: 16px;
-padding-right: 10px;
+padding:13px;
 text-align: center;
 
 }
 
 li{
     list-style-type: none;
+}
+
+.inicio{
     float: left;
+}
+.reg{
+    float:right;
 }
 
 nav{
@@ -67,4 +69,14 @@ nav{
 
 li a:hover{
     background:  #09241a;
+}
+
+.h{
+    text-align: center;
+    position:relative;
+    top:190px;
+    left:0px;
+    font-size: 30px;
+    text-decoration-line:underline;
+    text-decoration-color: #223a31;
 }
