@@ -9,6 +9,12 @@
 body{background-color: #dfdfd3;
    }
 
+form{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
 
 .entrada ,.boton{
     width: 50%;
@@ -17,9 +23,7 @@ body{background-color: #dfdfd3;
   margin: 8px 0;
   border: none;
   color: white; 
-   position:relative;
-   top:230px;
-    left:340px;
+ 
  
 }
 
@@ -46,7 +50,6 @@ color:white;
 display: block;
 padding:13px;
 text-align: center;
-
 }
 
 li{
@@ -72,10 +75,6 @@ li a:hover{
 }
 
 .h{
-    text-align: center;
-    position:relative;
-    top:190px;
-    left:0px;
     font-size: 30px;
     text-decoration-line:underline;
     text-decoration-color: #223a31;
