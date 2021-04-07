@@ -9,40 +9,6 @@
 body{background-color: #dfdfd3;
    }
 
-form{
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-}
-
-.entrada ,.boton{
-    width: 50%;
-  padding: 12px 20px;
-  box-sizing:border-box;
-  margin: 8px 0;
-  border: none;
-  color: white; 
- 
- 
-}
-
-::placeholder{
-    color:white;
-}
-
-.entrada{
-    background-color: #3CBC8D;
-}
-
-.boton{
-    background-color: #156145;
-}
-
-.boton:hover{
-    background-color: #3CBC8D;
-}
-
 a{
 outline: none;
 text-decoration:none ;
@@ -79,3 +45,4 @@ li a:hover{
     text-decoration-line:underline;
     text-decoration-color: #223a31;
 }
+
