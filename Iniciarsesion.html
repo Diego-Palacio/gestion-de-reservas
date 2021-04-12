@@ -5,7 +5,7 @@
     <title>Gestion de reservas</title>
     <link rel='stylesheet' type='text/css'  href='estilo/general.css'>
     <link rel='stylesheet' type='text/css'  href='estilo/iniciarsesion.css'>
-    <script src='codigo.js'></script>
+   
 </head>
 <body>
     
@@ -18,15 +18,15 @@
 
     
        
-    <form>
+    <form id="form">
         <h1 class="h"> Inicia sesion</h1>
-        <input class="entrada" type="email" placeholder="Ingrese su email" />
-        <input class="entrada" type="password" placeholder="Ingrese su contraseña"/>
+        <input class="entrada" id="email" type="email" placeholder="Ingrese su email" required/>
+        <input class="entrada" id="contraseña" type="password" placeholder="Ingrese su contraseña" required/>
 
-        <button class="boton" > Iniciar sesion</button>
+        <input type="submit" onclick="iniciar()" class="boton" value="Registrarse" />
     </form>
         
-
+    <script src='codigo.js'></script>
 
 
 </body>

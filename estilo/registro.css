@@ -1,8 +1,8 @@
 .grid{
     display: grid;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 45px 45px;
-    grid-gap: 10px;
+    grid-template-columns: 200px 400px;
+    grid-gap: 12px;
+   
 }
 
 form{
@@ -17,7 +17,7 @@ h1{
 }
 
 .boton{
-    width: 205%;
+    width: 310%;
     padding: 12px 20px;
     box-sizing:border-box;
     margin: 8px 0;
@@ -35,4 +35,7 @@ h1{
 }
 input{
     border: none;
+    width: 100%;
+    
 }
+

@@ -17,35 +17,34 @@
     </nav>
 
      <h1 class="h"> Crea tu cuenta:</h1>
-    <form>
-        
-    
+    <form id="form">
+   
         <div class="grid">
            
-            <span> Nombre:</span>
-            <input type="text"> 
+            <span > Nombre: </span>
+            <input  type="text"> 
             <span> Apellido:</span>
-            <input type="text"/> 
-            <span> Domicilio:</span>
-            <input type="text"> 
-            <span> Dni:</span>
-            <input type="text"> 
+            <input  type="text"/> 
+            <span > Domicilio:</span>
+            <input  type="text"> 
+            <span  >Dni:</span>
+            <input  type="text"> 
             <span> Fecha de nacimiento:</span>
-            <input type="date"> 
+            <input  type="date"> 
             <span> Cobertura medica:</span>
-            <input type="text"> 
+            <input  type="text"> 
             <span> Tipo de plan medico:</span>
-            <input type="text"> 
-            <span> Ingresa su email:</span>
-            <input class="input-registro" type="email" />
-            <span> Ingresa su contraseña:</span>
-            <input class="input-registro" type="password"/>
-            <button class="boton"> Registrarse</button>
+            <input  type="text"> 
+            <span> Email:</span>
+            <input class="input-registro" type="email" id="email" required />
+            <span> Contraseña:</span>
+            <input class="input-registro" type="password" id="contraseña" required />
+            <input type="submit" onclick="registrar()" class="boton" value="Registrarse" />
          </div>
     </form>
         
 
-
+    <script src='codigo.js'></script>
 
 </body>
 </html>
