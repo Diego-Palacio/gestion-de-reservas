@@ -36,6 +36,7 @@ for(usuario of listaUsuarios){
         return;
     }
 }
+alert('Registro exitoso');
 
 listaUsuarios.push(user);
 localStorage.setItem('usuarios',JSON.stringify(listaUsuarios));
