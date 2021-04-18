@@ -18,3 +18,8 @@
 
  
 
+function turnos(){
+
+    document.getElementById("turnos").style.display="";
+    document.getElementById("contenedor").style.display="none";
+}
