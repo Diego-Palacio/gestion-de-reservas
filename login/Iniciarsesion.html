@@ -19,11 +19,22 @@
     
        
     <form id="form">
-        <h1 class="h"> Inicia sesion</h1>
+        <h1 id="titulo"> Inicia sesion</h1>
         <input class="entrada" id="usuario" type="text" placeholder="Ingrese su usuario alfanumerico" required/>
         <input class="entrada" id="contraseña" type="password" placeholder="Ingrese su contraseña" required/>
 
-        <input type="submit" onclick="login()" class="boton" value="Registrarse" />
+        <input id="btnRegistrarse" type="submit" onclick="login()" class="boton" value="Iniciar sesion" />
+  
+             <button id="btnContraseñaOlvidada" onclick="ocultarYmostrar()" > Olvidaste tu contraseña?</button>
+                 <div class="contenedorBtns"> 
+                         <input id="emailRecuperarContraseña" type="email" placeholder="Ingrese su email" />
+                         <button id="btnRecuperarContraseña" onclick="infoContraseña()" >Recuperar</button>
+                         <button id="btnVolver"onclick="ocultarYmostrar()"  > Volver atras </button>
+                 </div>
+      
+        <lavel id="infoContraseña" style="color:rgb(43, 141, 43)"> Se ha enviado un email con la informacion correspondiente</lavel>
+
+
     </form>
         
     <script src='../login/iniciarsesion.js'></script>

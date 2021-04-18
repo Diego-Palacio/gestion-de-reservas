@@ -22,9 +22,52 @@ form{
 
 .boton{
     background-color: #156145;
+    color:white;
     
 }
 
 .boton:hover{
     background-color: #3CBC8D;
+}
+
+
+
+#btnRecuperarContraseña{
+    height: 40px;
+    background-color: #156145;
+    color:white;
+    margin-top:16px;
+    border:none;
+    outline:none;
+}
+#btnRecuperarContraseña:hover{
+background-color: #3CBC8D; }
+
+#btnVolver,#btnContraseñaOlvidada{
+    border:none;
+    background: none;
+    outline: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ }
+    
+
+#btnVolver:hover{
+   text-decoration:underline;
+}
+#btnContraseñaOlvidada:hover{
+    text-decoration:underline;
+ }
+
+ .contenedorBtns{
+     display:flex;
+     flex-direction:column;
+     box-sizing:content-box;
+     width: 320px;
+ }
+
+#emailRecuperarContraseña{
+    height: 40px;
+    border:none;
+    margin-top: 10px;
 }

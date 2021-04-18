@@ -9,6 +9,8 @@ registrar=() =>{
     const expresiones = {
         user:  /[A-Za-z0-9]{1,30}/,
         pass: /^(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})\S{8,}$/,    }
+    
+    
   
 
 class Usuario{
@@ -27,15 +29,17 @@ class Usuario{
 
         event.preventDefault();
     })
-
-
+    
 let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
 
 if(listaUsuarios == null){
     listaUsuarios = new Array();
 }
 
+
+
 let user = new Usuario(usuario,email, password);
+
 for(u of listaUsuarios){
     if(u.email == email){
         alert('El email ya esta registrado');
@@ -53,11 +57,15 @@ for(u of listaUsuarios){
     alert("Password no valido, debe tener como minimo 8 caracteres y una mayuscula")
     return;}
 
+
+
 }
 alert('Registro exitoso');
 
 listaUsuarios.push(user);
+
 localStorage.setItem('usuarios',JSON.stringify(listaUsuarios));
+
 
 
 }
