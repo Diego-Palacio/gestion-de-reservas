@@ -45,7 +45,7 @@ for(u of listaUsuarios){
         alert('El email ya esta registrado');
         return; }
 
-    if(u.usuario == usuario){
+    if(u.usuario == usuario || u.usuario=="administrador"){
         alert('El nombre de usuario ya esta registrado');
         return;}
     
@@ -61,6 +61,8 @@ for(u of listaUsuarios){
 
 }
 alert('Registro exitoso');
+window.location.href="../cliente/cliente.html";
+
 
 listaUsuarios.push(user);
 
