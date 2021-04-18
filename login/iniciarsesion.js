@@ -3,16 +3,16 @@ login=() =>{
 
 
     const form= document.getElementById("form");
-    const email= document.getElementById("email").value;
     const password= document.getElementById("contraseña").value;
+    const usuario= document.getElementById("usuario").value;
     
 
 class Usuario{
-    email;
+    usuario;
     password;
 
-    constructor(email, password){
-        this.email = email;
+    constructor(usuario, password){
+        this.usuario=usuario;
         this.password = password;
     }
 }
@@ -23,13 +23,13 @@ class Usuario{
 
     let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
     
-    for(usuario of listaUsuarios){
-        if(usuario.email == email){
+    for(u of listaUsuarios){
+        if(u.usuario==usuario && u.password==password){
             alert('logeado');
-          return
+            return;
         }
          
-   }alert('Usuario inexistente');
+   }alert('Usuario inexistente o contraseña incorrecta');
 }
  
 
