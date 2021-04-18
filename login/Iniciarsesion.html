@@ -17,25 +17,34 @@
     </nav>
 
     
-       
-    <form id="form">
-        <h1 id="titulo"> Inicia sesion</h1>
+         <h1 id="titulo"> Inicia sesion</h1>
+    <div id="form">
+      
         <input class="entrada" id="usuario" type="text" placeholder="Ingrese su usuario alfanumerico" required/>
         <input class="entrada" id="contraseña" type="password" placeholder="Ingrese su contraseña" required/>
 
-        <input id="btnRegistrarse" type="submit" onclick="login()" class="boton" value="Iniciar sesion" />
-  
-             <button id="btnContraseñaOlvidada" onclick="ocultarYmostrar()" > Olvidaste tu contraseña?</button>
-                 <div class="contenedorBtns"> 
-                         <input id="emailRecuperarContraseña" type="email" placeholder="Ingrese su email" />
-                         <button id="btnRecuperarContraseña" onclick="infoContraseña()" >Recuperar</button>
-                         <button id="btnVolver"onclick="ocultarYmostrar()"  > Volver atras </button>
-                 </div>
+        <input id="btnRegistrarse" type="button" onclick="login()" class="boton" value="Iniciar sesion" />
+       
+        <button id="btnContraseñaOlvidada" onclick="ocultarYmostrar()" > Olvidaste tu contraseña?</button>  
+    
+    </div>
+         
+     <div id="contenedor" style="display:none">
+           
+             <input id="emailRecuperarContraseña" type="email" placeholder="Ingrese su email" />
+             <button id="btnRecuperarContraseña" onclick="infoContraseña()" >Recuperar</button>
+            
+           
+     </div>
+       <div id="contenedor2" style="display:none"> 
+             <button id="btnVolver"onclick="ocultarYmostrar()"  > Volver atras </button>
+            <lavel id="infoContraseña" style="color:rgb(43, 141, 43)"> Se ha enviado un email con la informacion correspondiente</lavel>   
+            </div>
+
       
-        <lavel id="infoContraseña" style="color:rgb(43, 141, 43)"> Se ha enviado un email con la informacion correspondiente</lavel>
 
 
-    </form>
+              
         
     <script src='../login/iniciarsesion.js'></script>
 

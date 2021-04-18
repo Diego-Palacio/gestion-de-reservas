@@ -31,9 +31,12 @@ class Usuario{
     })
     
 let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
+let admin = new Usuario("administrador","administrador@hotmail.com", "Administrador");
 
 if(listaUsuarios == null){
     listaUsuarios = new Array();
+    listaUsuarios.push(admin);
+    localStorage.setItem('usuarios',JSON.stringify(listaUsuarios));
 }
 
 
@@ -45,10 +48,10 @@ for(u of listaUsuarios){
         alert('El email ya esta registrado');
         return; }
 
-    if(u.usuario == usuario || u.usuario=="administrador"){
+    if(u.usuario == usuario || usuario =="administrador") {
         alert('El nombre de usuario ya esta registrado');
         return;}
-    
+
     if( ! expresiones.user.test(usuario)){
        alert("Usuario no valido")
         return; }

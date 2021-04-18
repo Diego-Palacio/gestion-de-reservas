@@ -6,13 +6,10 @@
   box-sizing:border-box;
   margin: 8px 0;
   border: none;
-  
- 
- 
 }
 
 
-form{
+#form{
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -31,14 +28,14 @@ form{
 }
 
 
-
 #btnRecuperarContraseña{
     height: 40px;
     background-color: #156145;
     color:white;
-    margin-top:16px;
+    margin-top:10px;
     border:none;
     outline:none;
+ 
 }
 #btnRecuperarContraseña:hover{
 background-color: #3CBC8D; }
@@ -49,6 +46,8 @@ background-color: #3CBC8D; }
     outline: none;
     margin-top: 20px;
     margin-bottom: 20px;
+  
+
  }
     
 
@@ -59,15 +58,27 @@ background-color: #3CBC8D; }
     text-decoration:underline;
  }
 
- .contenedorBtns{
-     display:flex;
-     flex-direction:column;
-     box-sizing:content-box;
-     width: 320px;
- }
+
 
 #emailRecuperarContraseña{
     height: 40px;
     border:none;
     margin-top: 10px;
+}
+#titulo{
+    text-align:center;
+}
+
+#contenedor{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor2{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
 }

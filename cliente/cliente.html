@@ -16,22 +16,40 @@
     </nav>
 
 
+    <form name="for" id="form">
     <h1> Cliente</h1>
-
     <h1>Reservar turno:</h1>
-        <select>
+        <select name="select" >
                 <option> Alergia</option>
-                <option> Alergia</option>
-                <option> Alergia</option>
-                <option> Alergia</option>
-                <option> Alergia</option>
-                <option> Alergia</option>
-                <option> Alergia</option>
-                <option> Alergia</option>
-                <option> Alergia</option>
-                <option> Alergia</option>
+                <option> Traumatologia</option>
+                <option> Ginecologia</option>
+                <option> Neumonologo</option>
+                <option> Pediatra</option>
+      </select>
+      <input type=button value="Buscar profesional" onclick="buscarProfesional()">
+    </form>
 
-        </select>
+      <script src='../cliente/cliente.js'></script>
+
+<!-- Paciente debe ver lista de especialidades con medicos y turnos disponibles para elegir. Tambien de laboratorios. -->
+   
+   <div id="contenedor" style="display:none"> 
+         <div class="a">
+            <label> Doctor: Guillermo Lopez</label>
+             <label id="especialista">, Especialidad: </label>
+             <button style="height: 50px;"> Tomar turno</button>
+        </div>
+        <div class="a"> 
+            <label> Doctor: Matias ponce</label>
+            <label id="especialista2">, Especialidad: </label>
+            <button style="height: 50px;" > Tomar turno</button>
+        </div>
+        <div class="a"> 
+            <label> Doctor: Luciana palma</label>
+            <label id="especialista3">, Especialidad: </label>
+            <button style="height: 50px;"> Tomar turno</button>
+        </div>
+    </div>
 
 
 

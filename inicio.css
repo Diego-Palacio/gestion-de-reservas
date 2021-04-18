@@ -46,3 +46,25 @@ li a:hover{
     text-decoration-color: #223a31;
 }
 
+#contenedor{
+    
+    display:grid;
+    grid-template-columns: 10px;
+    grid-gap: 20px;
+    
+}
+
+.a{
+    display:flex;
+    flex-direction: row;
+    margin-top: 8px;
+    border: 2px solid black;
+    width: 800px;
+    height: 60px;
+    justify-content: center;
+   align-items: center;
+}
+
+label{
+    margin-right: 10px;
+}
