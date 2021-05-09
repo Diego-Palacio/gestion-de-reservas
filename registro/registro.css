@@ -9,6 +9,9 @@ form{
     display:flex;
     justify-content: center;
     align-items: center;
+    background: #4f84c2b4;
+    width: 700px;
+    padding: 40px;
 }
 
 h1{
@@ -26,12 +29,12 @@ h1{
 }
 
 .boton{
-    background-color: #156145;
+    background-color: #083f7e;
     
 }
 
 .boton:hover{
-    background-color: #3CBC8D;
+    background-color: #0c325e;
 }
 input{
     border: none;

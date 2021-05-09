@@ -3,6 +3,7 @@
 
  function buscarProfesional(){ 
     document.getElementById("contenedor").style.display="";
+    document.getElementById("turnos").style.display="none";
   
 
     let especialidad = document.for.select.value;
