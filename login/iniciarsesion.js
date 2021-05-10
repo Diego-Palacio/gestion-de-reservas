@@ -51,7 +51,6 @@ class Usuario{
 }
  
 //Input de ingresar email para recuperar contraseña oculto
-
 document.getElementById("infoContraseña").style.display="none";
 
 ocultarYmostrar=()=>{
@@ -68,7 +67,6 @@ ocultarYmostrar=()=>{
     document.getElementById("contenedor2").style.display="none";
     document.getElementById("infoContraseña").style.display="none";
     document.getElementById("form").style.display="";
-  
     document.getElementsByTagName("H1")[0].textContent = 'Inicia sesion:';
     }
  }

@@ -32,15 +32,17 @@
 
 #btnRecuperarContraseña{
     height: 40px;
-    background-color: #156145;
+    background-color: #083f7e;
     color:white;
     margin-top:10px;
     border:none;
     outline:none;
+    padding:10px;
  
 }
 #btnRecuperarContraseña:hover{
-background-color: #3CBC8D; }
+background-color:#0c325e; 
+}
 
 #btnVolver,#btnContraseñaOlvidada{
     border:none;
@@ -56,8 +58,14 @@ background-color: #3CBC8D; }
 #btnVolver:hover{
    text-decoration:underline;
 }
+
+#btnContraseñaOlvidada{
+    font-weight: bold;
+ }
+
 #btnContraseñaOlvidada:hover{
     text-decoration:underline;
+    
  }
 
 
@@ -73,9 +81,12 @@ background-color: #3CBC8D; }
 
 #contenedor{
     display: flex;
-    flex-direction:row;
     justify-content: center;
     align-items: center;
+    background: #4f84c2b4;
+    width: 400px;
+    height: 60px;
+    margin-top:20px;
 }
 
 #contenedor2{
@@ -83,4 +94,12 @@ background-color: #3CBC8D; }
     flex-direction:column;
     justify-content: center;
     align-items: center;
+}
+
+
+#infoContraseña{
+    color:#083f7e;
+    background: white;
+    padding:10px;
+    border: 2px solid #083f7e;
 }

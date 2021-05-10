@@ -12,6 +12,11 @@ form{
     background: #4f84c2b4;
     width: 700px;
     padding: 40px;
+    font-weight: bold;
+}
+
+span{
+    font-size: 19px;
 }
 
 h1{

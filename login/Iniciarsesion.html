@@ -31,15 +31,16 @@
          
      <div id="contenedor" style="display:none">
            
-             <input id="emailRecuperarContraseña" type="email" placeholder="Ingrese su email" />
-             <button id="btnRecuperarContraseña" onclick="infoContraseña()" >Recuperar</button>
+             <input id="emailRecuperarContraseña" type="email" placeholder="Ingrese su email" required/>
+             <input type="submit" id="btnRecuperarContraseña" onclick="infoContraseña()" value="Recuperar" />
             
            
      </div>
+
        <div id="contenedor2" style="display:none"> 
              <button id="btnVolver"onclick="ocultarYmostrar()"  > Volver atras </button>
-            <lavel id="infoContraseña" style="color:rgb(43, 141, 43)"> Se ha enviado un email con la informacion correspondiente</lavel>   
-            </div>
+            <lavel id="infoContraseña"> Se ha enviado un email con la informacion correspondiente</lavel>   
+    </div>
 
       
 

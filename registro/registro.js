@@ -10,8 +10,6 @@ registrar=() =>{
         user:  /[A-Za-z0-9]{1,30}/,
         pass: /^(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})\S{8,}$/,    }
     
-    
-  
 
 class Usuario{
     usuario; 
@@ -38,8 +36,6 @@ if(listaUsuarios == null){
     listaUsuarios.push(admin);
     localStorage.setItem('usuarios',JSON.stringify(listaUsuarios));
 }
-
-
 
 let user = new Usuario(usuario,email, password);
 
