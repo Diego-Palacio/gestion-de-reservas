@@ -11,10 +11,12 @@ login=() =>{
 class Usuario{
     usuario;
     password;
+    
 
     constructor(usuario, password){
         this.usuario=usuario;
         this.password = password;
+      
     }
 }
     // evento para que no se actualize la pagina al apretar algun boton

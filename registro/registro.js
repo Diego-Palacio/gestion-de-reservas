@@ -15,11 +15,12 @@ class Usuario{
     usuario; 
     email;
     password;
-
+    turnos;
     constructor(usuario,email, password){
         this.usuario=usuario;
         this.email = email;
         this.password = password;
+        this.turnos="";
     }
 }
 
