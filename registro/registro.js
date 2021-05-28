@@ -7,7 +7,8 @@ registrar=() =>{
     const password= document.getElementById("contraseña").value;
     const usuario= document.getElementById("usuario").value;
     const expresiones = {
-        user:  /[A-Za-z0-9]{1,30}/,
+      /*  user:  /[A-Za-z0-9]{1,30}/,*/
+        cuenta: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/ ,
         pass: /^(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})\S{8,}$/,    }
     
 
@@ -45,13 +46,17 @@ for(u of listaUsuarios){
         alert('El email ya esta registrado');
         return; }
 
-    if(u.usuario == usuario || usuario =="administrador") {
-        alert('El nombre de usuario ya esta registrado');
+    if(u.email == email || email =="administrador@hotmail.com") {
+        alert('El email ya esta registrado');
         return;}
 
-    if( ! expresiones.user.test(usuario)){
+       if( ! expresiones.cuenta.test(email)){
+            alert("email no valido")
+             return; } 
+
+   /* if( ! expresiones.user.test(usuario)){
        alert("Usuario no valido")
-        return; }
+        return; }*/
    
     if( ! expresiones.pass.test(password)){
     alert("Password no valido, debe tener como minimo 8 caracteres y una mayuscula")

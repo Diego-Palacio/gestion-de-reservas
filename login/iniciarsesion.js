@@ -4,7 +4,7 @@ login=() =>{
 
 
     const password= document.getElementById("contraseña").value;
-    const usuario= document.getElementById("usuario").value;
+    const usuario= document.getElementById("email").value;
 
     
 
@@ -26,7 +26,7 @@ class Usuario{
     let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
 
     //Ingreso de administrador 
-   if(usuario=="administrador" && password=="Administrador"){
+   if(email=="administrador@hotmail.com" && password=="Administrador"){
     alert('logeado');   
     window.location.href="../administrador/admin.html" ;
     return
@@ -40,7 +40,7 @@ class Usuario{
     else{ 
      //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
           for(u of listaUsuarios){
-        if(u.usuario==usuario && u.password==password){
+        if(u.email==usuario && u.password==password){
             alert('logeado');
             window.location.href="../cliente/cliente.html";
             return;
