@@ -42,10 +42,10 @@ function guardarTurno(){
  
 
 function turnos(){
-/*
+
     document.getElementById("turnos").style.display="";
     document.getElementById("contenedor").style.display="none";
-
+/*
     let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
   
 
