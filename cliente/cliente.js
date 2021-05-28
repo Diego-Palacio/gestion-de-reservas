@@ -42,7 +42,7 @@ function guardarTurno(){
  
 
 function turnos(){
-
+/*
     document.getElementById("turnos").style.display="";
     document.getElementById("contenedor").style.display="none";
 
@@ -65,6 +65,6 @@ function turnos(){
 
   }alert('Usuario inexistente o contraseña incorrecta');
   console.log(turno);
-   
+   */
  
 }
