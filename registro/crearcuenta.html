@@ -18,9 +18,7 @@
    
     <h1 id="titulo"> Crea tu cuenta:</h1>
     <form id="form">
-        <div class="grid">
-            <span > Nombre de usuario: </span>
-            <input  type="text" id="usuario" title="Tiene que ser un nombre alfanumerico con por lo menos una mayuscula"> 
+        <div class="grid" id="contenedor-formulario-principal" style="display:">
             <span > Nombre: </span>
             <input  type="text"> 
             <span> Apellido:</span>
@@ -30,17 +28,40 @@
             <span  >Dni:</span>
             <input  type="text"> 
             <span> Fecha de nacimiento:</span>
-            <input  type="date"> 
+            <input  type="date" max="2003-01-01"> 
             <span> Cobertura medica:</span>
             <input  type="text"> 
             <span> Tipo de plan medico:</span>
             <input  type="text"> 
+            <label>Tarjeta de debito a su nombre?</label>
+            <div class="radiobuttonflex">
+                <input type="button" id="tarjeta-debito" onclick="formularioTarjeta()" value="SI"/>
+                <input type="button" id="tarjeta-mercado" onclick="formularioOpcional()" value="NO"/>
+            </div>
             <span> Email:</span>
             <input class="input-registro" type="email" id="email" required />
             <span> Contraseña:</span>
             <input class="input-registro" type="password" id="contraseña" required />
             <input type="submit" onclick="registrar()" class="boton" value="Registrarse" />
          </div>
+
+         <div id="contenedor-formulario-tarjeta"class="grid" style="display:none">
+           
+            <span> numero de tarjeta</span>
+            <input id="tarjeta" type="number" placeholder="16 numeros" min="0000000000000000" oninput="if(this.value.length > this.min.length) this.value = this.value.slice(0, this.min.length);" required/>
+            <span> nombre y apellido </span>
+            <input type="text" id="nombres" onclick="" placeholder="tal cual este en la tarjeta" required/> 
+            <span> fecha de expiracion</span>
+            <input id="fecha" type="date"  min="2020-01-01"   max="2040-12-01" required/>   
+            <span> codigo de seguridad</span>
+            <input id="codigo" type="number" placeholder="111" min="000" max="999" oninput="if(this.value.length > this.min.length) this.value = this.value.slice(0, this.min.length);" required/>          
+
+            <input type="submit" onclick="validartarjeta()" value="confirmar" class="boton"  />
+            <div></div>
+            <input type="submit" onclick="volveratras()" value="atras" class="btn-atras"/>
+
+       </div>
+
     </form>
         
 

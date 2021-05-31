@@ -46,3 +46,38 @@ input{
     width: 100%;
     
 }
+
+.radiobuttonflex{
+    display: flex;
+/*  flex-direction: column;*/
+}
+
+.radiobuttonflex, input{
+    margin-left: 10px;
+    width: 200px;
+}
+
+.form-tarjeta{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.fomr-tarjeta,input{
+    margin-bottom: 20px;
+    width: 400px;
+}
+
+.btn-atras{
+    width: 100px;
+}
+
+
+#tarjeta-debito,#tarjeta-mercado{
+    background: #0c325e;
+    color:white;
+}
+
+#tarjeta-debito:hover ,#tarjeta-mercado:hover{
+    background: #1b5fac;
+}

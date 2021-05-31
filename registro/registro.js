@@ -81,9 +81,79 @@ localStorage.setItem('usuarios',JSON.stringify(listaUsuarios));
 
  //test()	Prueba una coincidencia en una cadena. Devuelve true o false
 
+validartarjeta=()=>{
+    const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
+    const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
+
+    const numeroTarjeta= document.getElementById("tarjeta").value;
+    const formnombres= document.getElementById("nombres").value;
+    const formcodigo= document.getElementById("codigo").value;
+
+    const expresiones = {
+        nombres: /^[a-zA-Z]*$/,
+        tarjeta: /[1-9]{16}/,    
+        codigo: /[1-9]{3}/
+    }
+
+    if( ! expresiones.tarjeta.test(numeroTarjeta)){
+                alert("tarjeta no valida")
+                 return; } 
+     if( ! expresiones.nombres.test(formnombres)){
+                 alert("nombre no validos")
+                     return; }             
+      if( ! expresiones.codigo.test(formcodigo)){
+                alert("nombre no validos")
+                    return; }      
+                 
+    else{formularioTarjeta.style.display="none";
+    furmularioPrincipal.style.display="";
+    titulo.innerHTML="Crea tu cuenta";
+    }
+
+    
+    
 
 
+}
 
 
+formularioTarjeta=()=>{
+    const titulo= document.getElementById("titulo");
+     const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
+    const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
+   
 
- 
+    formularioTarjeta.style.display="";
+    furmularioPrincipal.style.display="none";
+    titulo.innerHTML="Tarjeta de debito";
+    
+   
+    
+        
+}
+
+formularioOpcional=()=>{
+    const titulo= document.getElementById("titulo");
+     const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
+    const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
+   
+
+    formularioTarjeta.style.display="";
+    furmularioPrincipal.style.display="none";
+    titulo.innerHTML="Tarjeta de mercado pago";
+
+  
+   
+}
+
+volveratras=(b)=>{
+    const titulo= document.getElementById("titulo");
+    const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
+    const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
+
+    formularioTarjeta.style.display="none";
+    furmularioPrincipal.style.display="";
+    titulo.innerHTML="Crea tu cuenta";
+
+
+}
