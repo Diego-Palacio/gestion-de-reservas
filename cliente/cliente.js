@@ -45,26 +45,72 @@ function turnos(){
 
     document.getElementById("turnos").style.display="";
     document.getElementById("contenedor").style.display="none";
-/*
-    let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
-  
-
-
     
+/*
+
+    let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
+ 
     //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
        for(u of listaUsuarios){
-       if(u.usuario=="diego" ){
+       if(u.conectado=="true"){
            alert('Confirmado');
            turno =u.turnos+="12";
-           alert(u.turnos);
-           alert(u.usuario);
            localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
            return;
           
        }
 
-  }alert('Usuario inexistente o contraseña incorrecta');
-  console.log(turno);
-   */
+  }
+ */
+}
+
+cerrarSesion=()=>{
+    let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
+    for(u of listaUsuarios){
+        if(u.conectado=="true"){
+          
+           u.conectado="false";
+           localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
+            return; }
+    }
+
+}
+
+seleccionturno=()=>{
+
+   
+
+/* Para obtener el texto */
+var combo = document.getElementById("seleccionTurno");
+var selected = combo.options[combo.selectedIndex].text;
+
+  return(selected);
+}
+
+
+
+
+reservarTurno=()=>{
  
+
+  let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
+
+  
+    //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
+       for(u of listaUsuarios){
+       if(u.conectado=="true"){
+           alert("Tienes un turno el "+ u.turnos +"");
+           u.turnos=seleccionturno() + "-";
+           localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
+           return;
+          
+       }
+     
+
+  
+}
+
+
+
+
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Gestion de reservas</title>
+    <link rel='stylesheet' type='text/css'  href='../inicio.css'>
+    <link rel='stylesheet' type='text/css'  href='cliente.css'>
+</head>
+<body>
+    
+    <nav >
+        <li><a class="reg" href="/index.html" id="cerrar-sesion" onclick="cerrarSesion()"> Cerrar sesion</a></li>
+        <li><a class="reg" href="" id="" onclick=""> Mis turnos</a></li>
+        <li><a class="reg" href="cliente.html" id="" onclick=""> Reservar turno</a></li>
+    </nav>
+
+    
+    <div class="misturnos">
+        <h1 id="misturnos">No tienes turnos</h1>
+        <input class="boton" type="button" value="Cancelar turno" onclick="cancelarturno()"/>
+        </div>
+       
+
+  <script>
+
+     let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
+    
+  
+    //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
+       for(u of listaUsuarios){
+       if(u.conectado=="true"){
+           document.getElementById("misturnos").innerHTML = u.turnos;
+           
+       }
+       
+
+  
+}
+
+     cancelarturno=()=>{
+      
+        let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
+    
+    //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
+       for(u of listaUsuarios){
+       if(u.conectado=="true"){
+           u.turnos="";
+           document.getElementById("misturnos").innerHTML = "No tienes turnos";
+           alert("turno cancelado");
+           localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
+           return;
+       }
+      
+      
+        
+    }
+}
+
+  </script> 
+
+</body>
+</html>

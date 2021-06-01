@@ -42,6 +42,8 @@ class Usuario{
           for(u of listaUsuarios){
         if(u.email==usuario && u.password==password){
             alert('logeado');
+            u.conectado="true";
+            localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
             window.location.href="../cliente/cliente.html";
             return;
         }

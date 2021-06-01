@@ -5,7 +5,7 @@ registrar=() =>{
     const form= document.getElementById("form");
     const email= document.getElementById("email").value;
     const password= document.getElementById("contraseña").value;
-    const usuario= document.getElementById("usuario").value;
+   
     const expresiones = {
       /*  user:  /[A-Za-z0-9]{1,30}/,*/
         cuenta: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/ ,
@@ -13,15 +13,15 @@ registrar=() =>{
     
 
 class Usuario{
-    usuario; 
     email;
     password;
     turnos;
-    constructor(usuario,email, password){
-        this.usuario=usuario;
+    conectado;
+    constructor(email, password){
         this.email = email;
         this.password = password;
         this.turnos="";
+        this.conectado="";
     }
 }
 
@@ -31,7 +31,7 @@ class Usuario{
     })
     
 let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
-let admin = new Usuario("administrador","administrador@hotmail.com", "Administrador");
+let admin = new Usuario("administrador@hotmail.com", "Administrador","","");
 
 if(listaUsuarios == null){
     listaUsuarios = new Array();
@@ -39,9 +39,10 @@ if(listaUsuarios == null){
     localStorage.setItem('usuarios',JSON.stringify(listaUsuarios));
 }
 
-let user = new Usuario(usuario,email, password);
+let user = new Usuario(email, password);
 
 for(u of listaUsuarios){
+
     if(u.email == email){
         alert('El email ya esta registrado');
         return; }
@@ -61,19 +62,26 @@ for(u of listaUsuarios){
     if( ! expresiones.pass.test(password)){
     alert("Password no valido, debe tener como minimo 8 caracteres y una mayuscula")
     return;}
-
-
-
+   
 }
+
 alert('Registro exitoso');
 window.location.href="../cliente/cliente.html";
+
+
+
 
 
 listaUsuarios.push(user);
 
 localStorage.setItem('usuarios',JSON.stringify(listaUsuarios));
 
-
+for(u of listaUsuarios){
+    if(u.email == email){
+       u.conectado="true";
+       localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
+        return; }
+}
 
 }
 
