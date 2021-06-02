@@ -72,11 +72,21 @@ input{
 }
 
 
-#tarjeta-debito,#tarjeta-mercado{
-    background: #0c325e;
+#tarjeta-debito,#tarjeta-mercado,#tarjeta-bancaria{
+    background: #233f7b;
+    border: 1px solid black;
+    margin-top: 10px;
     color:white;
 }
 
-#tarjeta-debito:hover ,#tarjeta-mercado:hover{
-    background: #1b5fac;
+#tarjeta-debito:hover ,#tarjeta-mercado:hover,#tarjeta-bancaria:hover{
+    background: #3377c5;
+}
+
+.cobertura{
+    margin-bottom: 12px;
+}
+
+#tarjeta-debito:active ,#tarjeta-mercado:active,#tarjeta-bancaria:active{
+    background: #04214d;
 }

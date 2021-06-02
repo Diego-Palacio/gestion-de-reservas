@@ -30,13 +30,20 @@
             <span> Fecha de nacimiento:</span>
             <input  type="date" max="2003-01-01"> 
             <span> Cobertura medica:</span>
-            <input  type="text"> 
+                        <select class="cobertura"name="select" >
+                            <option value="1">Prepaga</option>
+                            <option value="2"> Obra social</option>
+                            <option value="3"> Particular</option>
+                        </select>
+           <!-- <input  type="text"> -->
             <span> Tipo de plan medico:</span>
             <input  type="text"> 
-            <label>Tarjeta de debito a su nombre?</label>
+            <label>Forma de pago:</label>
             <div class="radiobuttonflex">
-                <input type="button" id="tarjeta-debito" onclick="formularioTarjeta()" value="SI"/>
-                <input type="button" id="tarjeta-mercado" onclick="formularioOpcional()" value="NO"/>
+                
+                <input type="button" id="tarjeta-debito" onclick="formularioTarjeta()" value="Tarjeta de credito"/>
+                <input type="button" id="tarjeta-mercado" onclick="formularioMercadopago()" value="Mercado Pago"/>
+                <input type="button" id="tarjeta-bancaria" onclick="formularioBancaria()" value="Cuenta bancaria"/>
             </div>
             <span> Email:</span>
             <input class="input-registro" type="email" id="email" required />
@@ -59,8 +66,34 @@
             <input type="submit" onclick="validartarjeta()" value="confirmar" class="boton"  />
             <div></div>
             <input type="submit" onclick="volveratras()" value="atras" class="btn-atras"/>
-
        </div>
+
+       <div id="contenedor-formulario-tarjeta-mercado"class="grid" style="display:none">
+           
+        <span> Cuenta</span>
+        <input id="cuenta-mercado" type="email" required/>
+        <span>Contraseña </span>
+        <input  type="text" required/> 
+        
+        <input type="submit" onclick="validarTarjetaMercado()" value="confirmar" class="boton"  />
+        <div></div>
+        <input type="submit" onclick="volveratras()" value="atras" class="btn-atras"/>
+   </div>
+
+
+   <div id="contenedor-formulario-tarjeta-bancaria"class="grid" style="display:none">
+           
+    <span> Numero de cuenta bancaria:</span>
+    <input id="numero-bancaria"type="number" required/>
+   
+    
+    <input type="submit" onclick="validarTarjetaBancaria()" value="confirmar" class="boton"  />
+    <div></div>
+    <input type="submit" onclick="volveratras()" value="atras" class="btn-atras"/>
+</div>
+
+
+
 
     </form>
         

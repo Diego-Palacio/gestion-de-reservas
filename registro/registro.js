@@ -118,48 +118,127 @@ validartarjeta=()=>{
     titulo.innerHTML="Crea tu cuenta";
     }
 
-    
-    
+
+}
+
+
+
+validarTarjetaBancaria=()=>{
+    const formularioTarjetaMercado= document.getElementById("contenedor-formulario-tarjeta-mercado");
+    const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
+    const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
+    const formularioBancaria= document.getElementById("contenedor-formulario-tarjeta-bancaria");
+
+    const numeroBancaria= document.getElementById("numero-bancaria").value;
+    const expresiones = {
+        /*  user:  /[A-Za-z0-9]{1,30}/,*/
+             codigo: /[1-9]{50}/, }
+
+
+          if( ! expresiones.codigo.test(numeroBancaria)){
+            alert("Cuenta invalida")
+             return; } 
+
+        else{
+            formularioTarjeta.style.display="none";
+            furmularioPrincipal.style.display="";
+            formularioBancaria.style.display="none";
+            formularioTarjetaMercado.style.display="none";
+            titulo.innerHTML="Crea tu cuenta";
+}
 
 
 }
+
+validarTarjetaMercado=()=>{
+    const formularioTarjetaMercado= document.getElementById("contenedor-formulario-tarjeta-mercado");
+    const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
+    const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
+    const formularioBancaria= document.getElementById("contenedor-formulario-tarjeta-bancaria");
+
+    const numeroTarjeta= document.getElementById("cuenta-mercado").value;
+    const expresiones = {
+        /*  user:  /[A-Za-z0-9]{1,30}/,*/
+          cuenta: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/ ,   }
+
+
+          if( ! expresiones.cuenta.test(numeroTarjeta)){
+            alert("Cuenta invalida")
+             return; } 
+
+        else{
+            formularioTarjeta.style.display="none";
+            furmularioPrincipal.style.display="";
+            formularioBancaria.style.display="none";
+            formularioTarjetaMercado.style.display="none";
+            titulo.innerHTML="Crea tu cuenta";
+}
+
+
+}
+
+
+
 
 
 formularioTarjeta=()=>{
     const titulo= document.getElementById("titulo");
      const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
     const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
+    const formularioTarjetaMercado= document.getElementById("contenedor-formulario-tarjeta-mercado");
+    const formularioBancaria= document.getElementById("contenedor-formulario-tarjeta-bancaria");
    
 
     formularioTarjeta.style.display="";
     furmularioPrincipal.style.display="none";
-    titulo.innerHTML="Tarjeta de debito";
+    formularioTarjetaMercado.style.display="none";
+    formularioBancaria.style.display="none";
+    titulo.innerHTML="Tarjeta de credito";
     
-   
     
-        
 }
 
-formularioOpcional=()=>{
+formularioMercadopago=()=>{
     const titulo= document.getElementById("titulo");
      const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
     const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
+    const formularioTarjetaMercado= document.getElementById("contenedor-formulario-tarjeta-mercado");
+    const formularioBancaria= document.getElementById("contenedor-formulario-tarjeta-bancaria");
    
 
-    formularioTarjeta.style.display="";
+    formularioTarjeta.style.display="none";
     furmularioPrincipal.style.display="none";
-    titulo.innerHTML="Tarjeta de mercado pago";
+    formularioBancaria.style.display="none";
+    formularioTarjetaMercado.style.display="";
+    titulo.innerHTML="Mercado Pago";
 
-  
-   
+}
+
+formularioBancaria=()=>{
+    const titulo= document.getElementById("titulo");
+    const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
+   const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
+   const formularioBancaria= document.getElementById("contenedor-formulario-tarjeta-bancaria");
+
+
+   formularioTarjeta.style.display="none";
+   furmularioPrincipal.style.display="none";
+   formularioBancaria.style.display="";
+   formularioTarjetaMercado.style.display="none";
+   titulo.innerHTML="Cuenta bancaria";
+
 }
 
 volveratras=(b)=>{
     const titulo= document.getElementById("titulo");
     const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
     const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
+    const formularioTarjetaMercado= document.getElementById("contenedor-formulario-tarjeta-mercado");
+    const formularioBancaria= document.getElementById("contenedor-formulario-tarjeta-bancaria");
 
     formularioTarjeta.style.display="none";
+    formularioTarjetaMercado.style.display="none";
+    formularioBancaria.style.display="none";
     furmularioPrincipal.style.display="";
     titulo.innerHTML="Crea tu cuenta";
 
