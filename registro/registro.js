@@ -5,12 +5,36 @@ registrar=() =>{
     const form= document.getElementById("form");
     const email= document.getElementById("email").value;
     const password= document.getElementById("contraseña").value;
+    const rnombre= document.getElementById("rnombre").value;
+    const rapellido= document.getElementById("rapellido").value;
+    const rdomicilio= document.getElementById("rdomicilio").value;
+    const rdni= document.getElementById("rdni").value;
+
+
    
     const expresiones = {
       /*  user:  /[A-Za-z0-9]{1,30}/,*/
         cuenta: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/ ,
-        pass: /^(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})\S{8,}$/,    }
+        pass: /^(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})\S{8,}$/, 
+        rnombre: /^[a-z]/  ,
+        rapellido: /^[a-z]/ ,
+        rdomicilio: /^([a-zA-Z_\s]{1,}\d{1,})+|(\d{1,}[a-zA-Z_]{1,})+$ / ,   
+        dni: /[1-9]{8,9}/ }
     
+        
+        if( ! expresiones.rnombre.test(rnombre)){
+            alert("nombre no valido")
+            return; } 
+        if( ! expresiones.rapellido.test(rapellido)){
+             alert("apellido no valido")
+              return; } 
+        if( ! expresiones.rdomicilio.test(rdomicilio)){
+           alert("domicilio no valido")
+            return; } 
+
+        if( ! expresiones.dni.test(rdni)){
+            alert("dni no valido")
+             return; } 
 
 class Usuario{
     email;
@@ -94,11 +118,11 @@ validartarjeta=()=>{
     const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
 
     const numeroTarjeta= document.getElementById("tarjeta").value;
-    const formnombres= document.getElementById("nombres").value;
+    const formnombres= document.getElementById("tnombres").value;
     const formcodigo= document.getElementById("codigo").value;
 
     const expresiones = {
-        nombres: /^[a-zA-Z]*$/,
+        nombres: /^[a-z]/  ,
         tarjeta: /[1-9]{16}/,    
         codigo: /[1-9]{3}/
     }
@@ -110,7 +134,7 @@ validartarjeta=()=>{
                  alert("nombre no validos")
                      return; }             
       if( ! expresiones.codigo.test(formcodigo)){
-                alert("nombre no validos")
+                alert("codigo no validos")
                     return; }      
                  
     else{formularioTarjeta.style.display="none";

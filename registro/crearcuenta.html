@@ -20,17 +20,17 @@
     <form id="form">
         <div class="grid" id="contenedor-formulario-principal" >
             <span > Nombre: </span>
-            <input  type="text"> 
+            <input id="rnombre" type="text" required> 
             <span> Apellido:</span>
-            <input  type="text"/> 
+            <input id="rapellido" type="text" required /> 
             <span > Domicilio:</span>
-            <input  type="text"> 
-            <span  >Dni:</span>
-            <input  type="text"> 
+            <input id="rdomicilio" type="text" required > 
+            <span >Dni:</span>
+            <input id="rdni" type="text" required > 
             <span> Fecha de nacimiento:</span>
-            <input  type="date" max="2003-01-01"> 
+            <input  type="date" max="2003-01-01" required > 
             <span> Cobertura medica:</span>
-                        <select class="cobertura"name="select" >
+                        <select class="cobertura"name="select" required >
                             <option value="1">Prepaga</option>
                             <option value="2"> Obra social</option>
                             <option value="3"> Particular</option>
@@ -57,7 +57,7 @@
             <span> numero de tarjeta</span>
             <input id="tarjeta" type="number" placeholder="16 numeros" min="0000000000000000" oninput="if(this.value.length > this.min.length) this.value = this.value.slice(0, this.min.length);" required/>
             <span> nombre y apellido </span>
-            <input type="text" id="nombres" onclick="" placeholder="tal cual este en la tarjeta" required/> 
+            <input type="text" id="tnombres" onclick="" placeholder="tal cual este en la tarjeta" required/> 
             <span> fecha de expiracion</span>
             <input id="fecha" type="date"  min="2020-01-01"   max="2040-12-01" required/>   
             <span> codigo de seguridad</span>
