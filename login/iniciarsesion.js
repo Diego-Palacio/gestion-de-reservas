@@ -61,6 +61,7 @@ class Usuario{
                 icon: "success",
                 button: "Volver a ingresar dato",
               });  
+              return;
            
         }
    } 
@@ -71,6 +72,7 @@ class Usuario{
     icon: "warning",
     button: "Volver a ingresar dato",
   }); 
+  return;
  
     }
   
