@@ -55,9 +55,8 @@ class Usuario{
             u.conectado="true";
             localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
             window.location.href="../cliente/cliente.html";
-            alert("login exitoso");
            
-          swal({     title: "Login exitoso",
+          swal({ title: "Login exitoso",
                 text: "",
                 icon: "success",
                 button: "Volver a ingresar dato",
