@@ -250,7 +250,7 @@ validarTarjetaBancaria=()=>{
                   });  
                  return; } 
                 
-                 if( ! expresiones.nombres.test(nombrebancaria) || nombrebancaria!= rnombre+" "+rapellido){
+                 if( ! expresiones.nombres.test(nombrebancaria) || nombrebancaria!= rnombre.value+" "+rapellido.value){
                     swal({
                         title: "La cuenta debe pertenecer al paciente registrado",
                         text: "",
