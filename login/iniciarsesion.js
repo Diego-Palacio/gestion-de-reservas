@@ -1,3 +1,4 @@
+let bloquear=0;
 
 login=() =>{
 
@@ -55,6 +56,7 @@ class Usuario{
      //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
           for(u of listaUsuarios){
         if(u.email==usuario && u.password==password){
+            bloquear=0;
             swal({ title: "Login exitoso",
                 text: "",
                 icon: "success",
@@ -71,6 +73,29 @@ class Usuario{
            
            
         }
+
+        if(u.email==usuario && u.password!=password){
+            bloquear++;
+
+            if(bloquear==5){
+              
+                swal({ title: "Usuario bloqueado",
+                text: "",
+                icon: "warning",
+                button: "",
+                });     return;
+            }
+            else{ 
+            swal({ title: "Usuario inexistente o contraseña incorrecta" + bloquear  ,
+                text: "",
+                icon: "warning",
+                button: "Volver a ingresar dato",
+                });   
+           }
+          return;
+        }
+
+
    } 
    
    swal({
