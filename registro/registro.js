@@ -188,7 +188,7 @@ validartarjeta=()=>{
          } 
      if( ! expresiones.nombres.test(formnombres) || formnombres!= rnombre.value + " " + rapellido.value){
         swal({
-            title: "nombre no valido",
+            title: "La tarjeta debe pertenecer al paciente registrado",
             text: "",
             icon: "warning",
             button: "Volver a ingresar dato",
