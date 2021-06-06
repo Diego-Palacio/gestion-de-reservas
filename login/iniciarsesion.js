@@ -27,14 +27,18 @@ class Usuario{
 
     //Ingreso de administrador 
    if(email=="administrador@hotmail.com" && password=="Administrador"){
-    swal({
-        title: "Login exitoso",
-        text: "",
-        icon: "success",
-        button: "Volver a ingresar dato",
-      });  
-    window.location.href="../administrador/admin.html" ;
-    return
+    swal({ title: "Login exitoso",
+    text: "",
+    icon: "success",
+    button: "Volver a ingresar dato",
+    });    
+
+  setTimeout(()=>{
+       
+  window.location.href="../administrador/admin.html" ;
+  },1000);  
+    return;
+   
     }
 
     //Si la lista de usuarios es vacia, entonces no existe usuario posible
@@ -51,17 +55,20 @@ class Usuario{
      //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
           for(u of listaUsuarios){
         if(u.email==usuario && u.password==password){
-            
-            u.conectado="true";
-            localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
-            window.location.href="../cliente/cliente.html";
-           
-          swal({ title: "Login exitoso",
+            swal({ title: "Login exitoso",
                 text: "",
                 icon: "success",
                 button: "Volver a ingresar dato",
-              });  
-              return;
+                });    
+
+              setTimeout(()=>{
+                    u.conectado="true";
+            localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
+              window.location.href="../cliente/cliente.html";
+              },1000);  
+          
+           return;
+           
            
         }
    } 
@@ -72,7 +79,7 @@ class Usuario{
     icon: "warning",
     button: "Volver a ingresar dato",
   }); 
-  return;
+ 
  
     }
   
