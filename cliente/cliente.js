@@ -123,7 +123,7 @@ reservarTurno=()=>{
             button: "Salir",
           });
         
-           u.turnos=seleccionturno() + "-";
+           u.turnos=seleccionturno();
            localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
            return;
           

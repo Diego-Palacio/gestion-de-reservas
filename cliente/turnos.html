@@ -16,7 +16,15 @@
 
     
     <div class="misturnos">
-        <h1 id="misturnos">No tienes turnos</h1>
+       
+
+        <select id="seleccionTurno" onchange="seleccionturno2()" >
+            <option value="1">Lunes 7/6/2021 09:00 a 09:30</option>
+            <option id="misturnos"> </option>
+           
+  </select>
+
+
         <input class="boton" type="button" value="Cancelar turno" onclick="cancelarturno()"/>
         </div>
        
@@ -27,12 +35,24 @@
 
      let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
     
+
+     seleccionturno2=()=>{
+
+   
+
+/* Para obtener el texto */
+var combo = document.getElementById("seleccionTurno");
+var selected = combo.options[combo.selectedIndex].text;
+
+  return(selected);
+}
+
+
   
     //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
        for(u of listaUsuarios){
        if(u.conectado=="true"){
-           document.getElementById("misturnos").innerHTML = u.turnos;
-           
+           let v=document.getElementById("misturnos").innerHTML = u.turnos;
        }
        
 
@@ -42,29 +62,48 @@
      cancelarturno=()=>{
       
         let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
-    
+
+  
     //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
        for(u of listaUsuarios){
-       if(u.conectado=="true"){
-       
-        setTimeout(()=>{
-  document.getElementById("misturnos").innerHTML = "No tienes turnos";
-           u.turnos="";
-           localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
-           return;
-       },1000)
 
-       swal({
+
+        if(u.conectado && seleccionturno2()=="Lunes 7/6/2021 09:00 a 09:30" ){
+
+        swal({
+     title: "seleccione un turno valido ",
+     text: "",
+     icon: "warning",
+     button: "Salir",
+   });  
+
+    return;
+     } 
+
+
+       else if(u.conectado=="true"  )
+       {
+      
+        setTimeout(()=>{
+           
+   swal({
         title: "Turno cancelado",
         text: "",
         icon: "success",
-        button: "Volver a ingresar dato",
+        button: "Salir",
       });  
 
+       },500)
+
+           document.getElementById("misturnos").innerHTML = "";
+           u.turnos="";
+           localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
+           return;
+      
          
        }
-      
-      
+
+       
         
     }
 }
