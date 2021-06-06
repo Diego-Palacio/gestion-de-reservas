@@ -93,18 +93,18 @@ for(u of listaUsuarios){
 
     if(u.email == email){
         swal({
-            title: "Usuario ya registrado",
+            title: "Usuario ya existente",
             text: "",
-            icon: "success",
+            icon: "warning",
             button: "Volver a ingresar dato",
           });  
         return; }
 
     if(u.email == email || email =="administrador@hotmail.com") {
         swal({
-            title: "Usuario ya registrado",
+            title: "Usuario ya existente",
             text: "",
-            icon: "success",
+            icon: "warning",
             button: "Volver a ingresar dato",
           });  
         return; }
