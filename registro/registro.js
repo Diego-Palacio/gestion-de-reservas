@@ -9,32 +9,56 @@ registrar=() =>{
     const rapellido= document.getElementById("rapellido").value;
     const rdomicilio= document.getElementById("rdomicilio").value;
     const rdni= document.getElementById("rdni").value;
-
+    
 
    
     const expresiones = {
       /*  user:  /[A-Za-z0-9]{1,30}/,*/
         cuenta: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/ ,
         pass: /^(?=(?:.*[A-Z]){1})(?=(?:.*[a-z]){1})\S{8,}$/, 
-        rnombre: /^[a-z]/  ,
-        rapellido: /^[a-z]/ ,
+        rnombre: /^[A-z]/  ,
+        rapellido: /^[A-z]/ ,
         rdomicilio: /^([a-zA-Z_\s]{1,}\d{1,})+|(\d{1,}[a-zA-Z_]{1,})+$ / ,   
         dni: /[1-9]{8,9}/ }
     
         
         if( ! expresiones.rnombre.test(rnombre)){
-            alert("nombre no valido")
-            return; } 
+            swal({
+                title: "Nombre no valido",
+                text: "",
+                icon: "warning",
+                button: "Volver a ingresar dato",
+              });
+            return;
+             } 
         if( ! expresiones.rapellido.test(rapellido)){
-             alert("apellido no valido")
-              return; } 
+            swal({
+                title: "Apellido no valido",
+                text: "",
+                icon: "warning",
+                button: "Volver a ingresar dato",
+              });
+            return;
+             } 
         if( ! expresiones.rdomicilio.test(rdomicilio)){
-           alert("domicilio no valido")
-            return; } 
+            swal({
+                title: "domicilio no valido",
+                text: "",
+                icon: "warning",
+                button: "Volver a ingresar dato",
+              });
+            return;
+             } 
 
         if( ! expresiones.dni.test(rdni)){
-            alert("dni no valido")
-             return; } 
+            swal({
+                title: "Dni no valido",
+                text: "",
+                icon: "warning",
+                button: "Volver a ingresar dato",
+              });
+            return;
+             } 
 
 class Usuario{
     email;
@@ -76,20 +100,37 @@ for(u of listaUsuarios){
         return;}
 
        if( ! expresiones.cuenta.test(email)){
-            alert("email no valido")
-             return; } 
+        swal({
+            title: "Email no valido",
+            text: "",
+            icon: "warning",
+            button: "Volver a ingresar dato",
+          });
+        return;
+         } 
 
    /* if( ! expresiones.user.test(usuario)){
        alert("Usuario no valido")
         return; }*/
    
     if( ! expresiones.pass.test(password)){
-    alert("Password no valido, debe tener como minimo 8 caracteres y una mayuscula")
-    return;}
+    swal({
+        title: "Password no valido, debe tener como minimo 8 caracteres y una mayuscula",
+        text: "",
+        icon: "warning",
+        button: "Volver a ingresar dato",
+      });
+    return;
+     } 
    
 }
 
-alert('Registro exitoso');
+swal({
+    title: "Login exitoso",
+    text: "",
+    icon: "success",
+    button: "Volver a ingresar dato",
+  });  
 window.location.href="../cliente/cliente.html";
 
 
@@ -128,14 +169,32 @@ validartarjeta=()=>{
     }
 
     if( ! expresiones.tarjeta.test(numeroTarjeta)){
-                alert("tarjeta no valida")
-                 return; } 
+        swal({
+            title: "Tarjeta no valida",
+            text: "",
+            icon: "warning",
+            button: "Volver a ingresar dato",
+          });
+        return;
+         } 
      if( ! expresiones.nombres.test(formnombres)){
-                 alert("nombre no validos")
-                     return; }             
+        swal({
+            title: "nombre no valido",
+            text: "",
+            icon: "warning",
+            button: "Volver a ingresar dato",
+          });
+        return;
+         }           
       if( ! expresiones.codigo.test(formcodigo)){
-                alert("codigo no validos")
-                    return; }      
+        swal({
+            title: "Codigo no valido",
+            text: "",
+            icon: "warning",
+            button: "Volver a ingresar dato",
+          });
+        return;
+         }   
                  
     else{formularioTarjeta.style.display="none";
     furmularioPrincipal.style.display="";
@@ -160,7 +219,12 @@ validarTarjetaBancaria=()=>{
 
 
           if( ! expresiones.codigo.test(numeroBancaria)){
-            alert("Cuenta invalida")
+            swal({
+                title: "Cuenta invalida",
+                text: "",
+                icon: "warning",
+                button: "Volver a ingresar dato",
+              });  
              return; } 
 
         else{
@@ -187,7 +251,12 @@ validarTarjetaMercado=()=>{
 
 
           if( ! expresiones.cuenta.test(numeroTarjeta)){
-            alert("Cuenta invalida")
+            swal({
+                title: "Tarjeta erronea",
+                text: "",
+                icon: "warning",
+                button: "Volver a ingresar dato",
+              });  
              return; } 
 
         else{

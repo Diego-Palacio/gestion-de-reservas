@@ -27,7 +27,12 @@ class Usuario{
 
     //Ingreso de administrador 
    if(email=="administrador@hotmail.com" && password=="Administrador"){
-    alert('logeado');   
+    swal({
+        title: "Login exitoso",
+        text: "",
+        icon: "success",
+        button: "Volver a ingresar dato",
+      });  
     window.location.href="../administrador/admin.html" ;
     return
     }
@@ -41,13 +46,23 @@ class Usuario{
      //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
           for(u of listaUsuarios){
         if(u.email==usuario && u.password==password){
-            alert('logeado');
+            swal({
+                title: "Login exitoso",
+                text: "",
+                icon: "success",
+                button: "Volver a ingresar dato",
+              });  
             u.conectado="true";
             localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
             window.location.href="../cliente/cliente.html";
             return;
         }
-   }alert('Usuario inexistente o contraseña incorrecta');
+   } swal({
+    title: "Usuario inexistente o contraseña incorrecta",
+    text: "",
+    icon: "warning",
+    button: "Volver a ingresar dato",
+  });  
     }
   
   

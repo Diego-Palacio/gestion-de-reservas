@@ -46,7 +46,12 @@
        if(u.conectado=="true"){
            u.turnos="";
            document.getElementById("misturnos").innerHTML = "No tienes turnos";
-           alert("turno cancelado");
+           swal({
+        title: "Turno cancelado",
+        text: "",
+        icon: "success",
+        button: "Volver a ingresar dato",
+      });  
            localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
            return;
        }

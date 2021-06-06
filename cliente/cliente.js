@@ -99,7 +99,13 @@ reservarTurno=()=>{
     //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
        for(u of listaUsuarios){
        if(u.conectado=="true"){
-           alert("Tienes un turno el "+ u.turnos +"");
+           swal({
+            title: "Tienes un turno el "+ u.turnos +"",
+            text: "",
+            icon: "success",
+            button: "Volver a ingresar dato",
+          });
+        
            u.turnos=seleccionturno() + "-";
            localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
            return;
