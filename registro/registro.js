@@ -264,7 +264,7 @@ validarTarjetaMercado=()=>{
 
           if( ! expresiones.cuenta.test(numeroTarjeta)){
             swal({
-                title: "Tarjeta erronea",
+                title: "cuenta erronea",
                 text: "",
                 icon: "warning",
                 button: "Volver a ingresar dato",
