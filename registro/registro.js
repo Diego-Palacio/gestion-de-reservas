@@ -186,7 +186,7 @@ validartarjeta=()=>{
           });
         return;
          } 
-     if( ! expresiones.nombres.test(formnombres)){
+     if( ! expresiones.nombres.test(formnombres) || formnombres!= rnombre.value + " " + rapellido.value){
         swal({
             title: "nombre no valido",
             text: "",
