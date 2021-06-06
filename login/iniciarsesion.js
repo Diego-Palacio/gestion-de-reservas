@@ -82,11 +82,11 @@ class Usuario{
                 swal({ title: "Usuario bloqueado",
                 text: "",
                 icon: "warning",
-                button: "",
+                button: "Salir",
                 });     return;
             }
             else{ 
-            swal({ title: "Usuario inexistente o contraseña incorrecta" + bloquear  ,
+            swal({ title: "Usuario inexistente o contraseña incorrecta"  ,
                 text: "",
                 icon: "warning",
                 button: "Volver a ingresar dato",
