@@ -227,7 +227,7 @@ validarTarjetaBancaria=()=>{
     const numeroBancaria= document.getElementById("numero-bancaria").value;
     const expresiones = {
         /*  user:  /[A-Za-z0-9]{1,30}/,*/
-             codigo: /[1-9]{50}/, }
+             codigo: /[1-9]{20}/, }
 
 
           if( ! expresiones.codigo.test(numeroBancaria)){
