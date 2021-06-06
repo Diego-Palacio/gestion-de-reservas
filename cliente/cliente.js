@@ -100,10 +100,10 @@ reservarTurno=()=>{
        for(u of listaUsuarios){
        if(u.conectado=="true"){
            swal({
-            title: "Tienes un turno el "+ u.turnos +"",
+            title: "Tienes un turno el "+ u.turnos,
             text: "",
             icon: "success",
-            button: "Volver a ingresar dato",
+            button: "Salir",
           });
         
            u.turnos=seleccionturno() + "-";

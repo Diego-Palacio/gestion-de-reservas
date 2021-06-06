@@ -20,8 +20,10 @@
         <input class="boton" type="button" value="Cancelar turno" onclick="cancelarturno()"/>
         </div>
        
-
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script>
+
+
 
      let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
     
@@ -44,16 +46,22 @@
     //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
        for(u of listaUsuarios){
        if(u.conectado=="true"){
+       
+        setTimeout(()=>{
+  document.getElementById("misturnos").innerHTML = "No tienes turnos";
            u.turnos="";
-           document.getElementById("misturnos").innerHTML = "No tienes turnos";
-           swal({
+           localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
+           return;
+       },1000)
+
+       swal({
         title: "Turno cancelado",
         text: "",
         icon: "success",
         button: "Volver a ingresar dato",
       });  
-           localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
-           return;
+
+         
        }
       
       
