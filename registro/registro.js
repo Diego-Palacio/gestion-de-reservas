@@ -92,13 +92,22 @@ let user = new Usuario(email, password);
 for(u of listaUsuarios){
 
     if(u.email == email){
-        alert('El email ya esta registrado');
+        swal({
+            title: "Usuario ya registrado",
+            text: "",
+            icon: "success",
+            button: "Volver a ingresar dato",
+          });  
         return; }
 
     if(u.email == email || email =="administrador@hotmail.com") {
-        alert('El email ya esta registrado');
-        return;}
-
+        swal({
+            title: "Usuario ya registrado",
+            text: "",
+            icon: "success",
+            button: "Volver a ingresar dato",
+          });  
+        return; }
        if( ! expresiones.cuenta.test(email)){
         swal({
             title: "Email no valido",
@@ -199,7 +208,10 @@ validartarjeta=()=>{
     else{formularioTarjeta.style.display="none";
     furmularioPrincipal.style.display="";
     titulo.innerHTML="Crea tu cuenta";
+   
     }
+
+    
 
 
 }
