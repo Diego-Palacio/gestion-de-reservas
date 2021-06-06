@@ -54,20 +54,25 @@ class Usuario{
             
             u.conectado="true";
             localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
-            window.location.href="../cliente/cliente.html";swal({
-                title: "Login exitoso",
+            window.location.href="../cliente/cliente.html";
+            alert("login exitoso");
+           
+          swal({     title: "Login exitoso",
                 text: "",
                 icon: "success",
                 button: "Volver a ingresar dato",
               });  
            
         }
-   } swal({
+   } 
+   
+   swal({
     title: "Usuario inexistente o contraseña incorrecta",
     text: "",
     icon: "warning",
     button: "Volver a ingresar dato",
-  });  
+  }); 
+ 
     }
   
   
