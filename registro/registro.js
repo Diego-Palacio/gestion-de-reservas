@@ -225,8 +225,10 @@ validarTarjetaBancaria=()=>{
     const formularioBancaria= document.getElementById("contenedor-formulario-tarjeta-bancaria");
 
     const numeroBancaria= document.getElementById("numero-bancaria").value;
+    const nombrebancaria= document.getElementById("nombre-bancaria").value;
     const expresiones = {
         /*  user:  /[A-Za-z0-9]{1,30}/,*/
+        nombres: /^[a-z]/  ,
              codigo: /[1-9]{20}/, }
 
 
@@ -239,6 +241,24 @@ validarTarjetaBancaria=()=>{
               });  
              return; } 
 
+             if( ! expresiones.nombres.test(nombrebancaria)){
+                swal({
+                    title: "Cuenta invalida",
+                    text: "",
+                    icon: "warning",
+                    button: "Volver a ingresar dato",
+                  });  
+                 return; } 
+                
+                 if( ! expresiones.nombres.test(nombrebancaria) || nombrebancaria!= rnombre+" "+rapellido){
+                    swal({
+                        title: "La cuenta debe pertenecer al paciente registrado",
+                        text: "",
+                        icon: "warning",
+                        button: "Volver a ingresar dato",
+                      });  
+                     return; } 
+                 
         else{
             formularioTarjeta.style.display="none";
             furmularioPrincipal.style.display="";
