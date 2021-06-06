@@ -64,6 +64,21 @@
       <input type="button" value="Reservar turno" class="boton" onclick="reservarTurno()"/>
     </div>
 
+    <div id="turnosNoDisponible" style="display:none"> 
+        
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>  
+        
+        
+        swal({ title: "No hay turno disponible",
+            text: "",
+            icon: "success",
+            button: "Volver a ingresar dato",
+            });    
+      
+       return; </script>
+    </div>
+
     
 
 

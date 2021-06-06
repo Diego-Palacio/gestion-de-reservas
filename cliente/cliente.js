@@ -43,11 +43,28 @@ function guardarTurno(){
 
 function turnos(){
 
-    document.getElementById("turnos").style.display="";
+document.getElementById("turnos").style.display="";
     document.getElementById("contenedor").style.display="none";
+    let especialidad = document.for.select.value;
+
+    if (especialidad=="Traumatologia")
+    {
+        document.getElementById("turnos").style.display="none";
+        swal({ title: "No hay turno disponible",
+        text: "",
+        icon: "warning",
+        button: "Volver a ingresar dato",
+        });    
+  
+   return;
+
+    }
+
+
+    
     
 /*
-
+    
     let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
  
     //recorro la lista de usuarios y su coincide con el user y contraseña se ingresa al sistema
