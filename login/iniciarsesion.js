@@ -63,7 +63,8 @@ class Usuario{
     //cargo la lista de usuarios
     let  listaUsuarios = JSON.parse (localStorage.getItem('usuarios'));
 
-    //Ingreso de administrador 
+    //Ingreso de administrador  
+    
    if(email=="administrador@hotmail.com" && password=="Administrador"){
     swal({ title: "Login exitoso",
     text: "",
