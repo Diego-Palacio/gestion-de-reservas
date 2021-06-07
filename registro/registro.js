@@ -344,7 +344,7 @@ formularioBancaria=()=>{
     const formularioTarjeta= document.getElementById("contenedor-formulario-tarjeta");
    const furmularioPrincipal= document.getElementById("contenedor-formulario-principal");
    const formularioBancaria= document.getElementById("contenedor-formulario-tarjeta-bancaria");
-
+   const formularioTarjetaMercado= document.getElementById("contenedor-formulario-tarjeta-mercado");
 
    formularioTarjeta.style.display="none";
    furmularioPrincipal.style.display="none";
