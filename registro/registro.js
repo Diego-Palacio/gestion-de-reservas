@@ -135,12 +135,12 @@ for(u of listaUsuarios){
 }
 
 swal({
-    title: "Login exitoso",
+    title: "Registro exitoso",
     text: "",
     icon: "success",
     button: "Volver a ingresar dato",
   });  
-window.location.href="../cliente/cliente.html";
+
 
 
 

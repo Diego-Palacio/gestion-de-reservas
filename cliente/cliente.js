@@ -47,7 +47,7 @@ document.getElementById("turnos").style.display="";
     document.getElementById("contenedor").style.display="none";
     let especialidad = document.for.select.value;
 
-    if (especialidad=="Traumatologia")
+    if (especialidad=="Cardiología")
     {
         document.getElementById("turnos").style.display="none";
         swal({ title: "No hay turno disponible",

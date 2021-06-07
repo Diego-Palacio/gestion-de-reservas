@@ -74,7 +74,7 @@ class Usuario{
   setTimeout(()=>{
        
   window.location.href="../administrador/admin.html" ;
-  },1000);  
+  },500);  
     return;
    
     }
@@ -104,7 +104,7 @@ class Usuario{
                     u.conectado="true";
             localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
               window.location.href="../cliente/cliente.html";
-              },1000);  
+              },2000);  
           
            return;
            
