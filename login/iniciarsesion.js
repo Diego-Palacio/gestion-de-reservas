@@ -105,7 +105,7 @@ class Usuario{
                     u.conectado="true";
             localStorage.setItem('usuarios',JSON.stringify (listaUsuarios));
               window.location.href="../cliente/cliente.html";
-              },2000);  
+              },4000);  
           
            return;
            
